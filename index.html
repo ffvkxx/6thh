@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthsary Interaction</title>
+</head>
+<body>
+    <script>
+        function showMessage(message) {
+            alert(message);
+        }
+
+        function promptForPassword() {
+            const password = prompt("Kung mahal mo ko, what's the password? Hint:Tawag ko sayo");
+
+            if (password === "Mahal") {
+                showMessage("Happy 6th Monthsary, Mahal! I Love You So Much");
+            } else {
+                showMessage("Mali :(. Hays!");
+            }
+        }
+
+        function main() {
+            const choice1 = confirm("1. Hi Mahal ko! Do you love me? Tap ok for yes...kasi yes naman talaga.");
+            
+            if (choice1) {
+                promptForPassword();
+            } else {
+                const choice2 = confirm("2. Sabi ko ok for yes hindi cancel 😞 hindi mo na ako love.");
+
+                if (choice2) {
+                    showMessage("ulitin mo hmmph");
+                } else {
+                    showMessage("Happy 6th Monthsary, Mahal! I Love You So Much!");
+                }
+            }
+        }
+
+        main();
+    </script>
+</body>
+</html>
